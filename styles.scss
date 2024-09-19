@@ -1,0 +1,50 @@
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primary: #5265E1;
+$secondary: #FA5959;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+// Importar nuevamente Bootstrap para que use las nuevas variables
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.nav-item * {
+    text-transform: uppercase;
+}
+
+.btn-login:hover {
+    color: $secondary !important;
+    background-color: transparent;
+    border: 1px solid $secondary;
+
+}
+
+.circle {
+    height: 300px;
+    width: 300px;
+    background-color: $primary;
+}
