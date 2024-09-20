@@ -10,16 +10,19 @@ $theme-colors: (
   "secondary": $secondary
 );
 
+
 // Importar nuevamente Bootstrap para que use las nuevas variables
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 
 *, *::after, *::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body, html {
     min-height: 100vh;
+    line-height: 1.6;
 }
 
 body {
@@ -27,13 +30,12 @@ body {
     font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
 }
 
-img {
-    max-width: 100% !important;
-    height: auto !important;
+header .nav-item * {
+    text-transform: uppercase;
 }
 
-.nav-item * {
-    text-transform: uppercase;
+a:hover {
+    background: transparent;
 }
 
 .btn-login:hover {
@@ -43,8 +45,45 @@ img {
 
 }
 
+
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-tabs .nav-link {
+    border: 0;
+    border-bottom: 1px solid #9194a1;
+    color: #9194a1;
+    padding: 0 1.5rem;
+    padding-bottom: 1rem;
+    
+    
+}
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: $secondary;
+}
+.nav-tabs .nav-link.active {
+    color: #0d0f16;
+    border-bottom: 2px solid $secondary;
+    padding-bottom: 1rem;
+}
+
+.nav-item {
+    padding-bottom: 0.6rem;
+}
+
 .circle {
     height: 300px;
     width: 300px;
     background-color: $primary;
+}
+
+.btn:hover {
+    border: 1px solid inherit;
+    background: none;
+    color: $primary;
 }
